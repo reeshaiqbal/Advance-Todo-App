@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Productivity App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #6C00FF, #AC00FF);
+      color: white;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header h2 {
+      font-size: 24px;
+    }
+
+    .search-box {
+      background-color: white;
+      padding: 10px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 8px;
+      flex-grow: 1;
+      border-radius: 10px;
+    }
+
+    .category {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .category-box {
+      flex: 1;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.2);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .category-box:nth-child(1) {
+      background-color: #FF6B81;
+    }
+
+    .category-box:nth-child(2) {
+      background-color: #FEC260;
+    }
+
+    .category-box:nth-child(3) {
+      background-color: #42C2FF;
+    }
+
+    .today-task {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .task-count {
+      background-color: #eee;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: #6C00FF;
+      color: white;
+      font-size: 32px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <p>Hello!</p>
+      <h2>Jhon Doe</h2>
+    </div>
+    <img src="https://i.pravatar.cc/50" alt="Profile" style="border-radius: 50%; width: 50px; height: 50px;">
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search medical..">
+  </div>
+
+  <div class="category">
+    <div class="category-box">Design<br><small>5 Task</small></div>
+    <div class="category-box">Meeting<br><small>1 Task</small></div>
+    <div class="category-box">Learning<br><small>2 Task</small></div>
+  </div>
+
+  <div class="today-task">
+    <h3>Today's Task</h3>
+    <div class="task-item">
+      <div class="task-left">
+        <span>✎</span> Sketching
+      </div>
+      <span class="task-count">3</span>
+    </div>
+    <div class="task-item">
+      <div class="task-left">
+        <span>🖨</span> Wireframing
+      </div>
+      <span class="task-count">0</span>
+    </div>
+    <div class="task-item">
+      <div class="task-left">
+        <span>🖌</span> Visual Design
+      </div>
+      <span class="task-count">5</span>
+    </div>
+  </div>
+
+  <button class="floating-btn">+</button>
+</body>
+</html>
